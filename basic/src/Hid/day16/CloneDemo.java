@@ -12,6 +12,7 @@ public static void main(String[] args) {
 }
 }
 class Sheep implements Cloneable{
+	
 	public Sheep() {
 		System.out.println("Sheep object created...");
 	}
