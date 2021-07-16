@@ -10,24 +10,26 @@ public class PropRevision {
 	public static void main(String[] args) {
 		Properties prop=new Properties();
 		
-		prop.put("mykey1","myvalue1111111111111");
-		prop.put("mykey2","value 222222222222222");
-		prop.put("mykey3","value 222222222222222");
+		prop.put("mykey1", "myvalue111111111111");
+		prop.put("mykey2", "value 22222222222222222");
+		prop.put("mykey3", "value 22222222222222222");
 		
 		System.out.println(prop.get("mykey1"));
+		System.out.println("++++++++++++++++");
 		
-		System.out.println("++++++++++++++++++");
 		Enumeration e=prop.elements();
 		while(e.hasMoreElements()) {
 			System.out.println(e.nextElement());
 		}
-		System.out.println("+++++++++++++++++++");
-		
+		System.out.println("+++++++++++++++++");
 		Set set=prop.entrySet();
 		Iterator iter=set.iterator();
 		while(iter.hasNext()) {
 			Map.Entry me=(Map.Entry)iter.next();
+			System.out.println(me.getKey()+":"+me.getValue());
 		}
 	}
+		
+	}
 
-}
+
