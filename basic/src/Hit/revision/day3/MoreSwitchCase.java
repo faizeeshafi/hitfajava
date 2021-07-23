@@ -25,7 +25,6 @@ public class MoreSwitchCase {
 	default:{
 	System.out.println("default pf string switch called....."+s);
 	}
-	
 	}
 	System.out.println("\n........");
 	switch(i) {
@@ -35,19 +34,18 @@ public class MoreSwitchCase {
 	}
 	case 1:{
 		System.out.println("value of int is 1...."+i);
-		break;
-		
+		break;	
 	}
 	case 2:{
 		System.out.println("value of int is2...."+i);
 		break;
-		
 	}
 	case 3:{
 		System.out.println("value of int is 2...."+i);
 		break;
 	}
-	System.out.println("\n character switch called....");
+	}
+    System.out.println("\n character switch called....");
 	switch(c) {
 	case 'b':{
 		System.out.println("b called...:"+c);
@@ -64,7 +62,7 @@ public class MoreSwitchCase {
 	System.out.println("\n enum switch is called.......");
 	switch(myenum.apple) {
 	case apple:{
-		System.out.println("aplle enum called...");
+		System.out.println("apple enum called...");
 		break;
 	}
 	case grapes:{
@@ -72,11 +70,10 @@ public class MoreSwitchCase {
 		break;
 	}
 	default:{
-		System.out.println("default enum called...");
+		System.out.println("default of enum called...");
 	}
 	}
 	
 	}
 	}
 
-}
