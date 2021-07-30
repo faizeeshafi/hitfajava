@@ -1,0 +1,80 @@
+package Hit.day38;
+
+public class EnumDemo {
+	public static void main(String[] args) {
+		System.out.println("Interface..:"+MyConstants.pi);
+		System.out.println("Enum...:"+MyConstantsEnum2.pi.getValue());
+		
+		met(MyConstants.tan30);
+		met(MyConstantsEnum2.tan30.getValue());
+		
+		switch((int)MyConstants.tan30) {
+		case 1:
+		{
+			System.out.println("it is tan30");
+		}
+		}
+		switch((int)MyConstantsEnum2.tan30.getValue()) {
+		case 1:
+		{
+			System.out.println("it is tan 30");
+		}
+		}
+		MyConstantsEnum v=MyConstantsEnum.orange;
+		enumMet(v);
+		
+		for(MyConstantsEnum me:MyConstantsEnum.values()) {
+			System.out.println(me+ "and it is price is...:" +me.getPrice());
+		}
+	}
+	
+	public static void enumMet(MyConstantsEnum mce) {
+		switch(mce) {
+		case apple:{
+			System.out.println("The enum is apple....");
+			System.out.println("the price of apple is ...:" +mce.getPrice());
+			break;
+			
+		}
+		case orange:{
+			System.out.println("The enum is orange....");
+			System.out.println("The price of orange is....:" +mce.getPrice());
+			break;
+		}
+			case mango:{
+				System.out.println("The enum is mango");
+				System.out.println("The price of mango is...:" +mce.getPrice());
+			break;
+			}
+		}
+		}
+		public static void met(float tanvalue) {
+			System.out.println(tanvalue);
+		}
+	}
+			interface MyConstants{
+				public final static float pi=3.14f;
+				public final static String e="mcsquare";
+				public final static float tan30=1.2f;
+			}
+			enum MyConstantsEnum{
+				apple(20),mango(30),orange(40);
+				int price;
+				private MyConstantsEnum(int price) {
+					this.price=price;
+				}
+			public int getPrice() {
+				return this.price;
+			}
+		}
+		enum MyConstantsEnum2{
+			pi(3.14f),tan30(1.2f);
+			float value;
+			private MyConstantsEnum2(float value) {
+				this.value=value;
+			}
+			public float getValue() {
+				return this.value;
+			}
+		}
+
